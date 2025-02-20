@@ -21,7 +21,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 31
     namespace "com.psycred.contacts_service"  // Unique namespace
 
     sourceSets {
