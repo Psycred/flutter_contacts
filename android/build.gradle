@@ -4,34 +4,32 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.android.tools.build:gradle:8.2.1'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
-    namespace "com.psycred.contacts_service"  // <-- Add a unique namespace here
-    //buildToolsVersion '31.0.3'
+    compileSdkVersion 33
+    namespace "com.psycred.contacts_service"  // Unique namespace
 
-     sourceSets {
+    sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-     }
+    }
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
